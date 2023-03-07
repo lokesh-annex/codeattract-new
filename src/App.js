@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom/client';
+
 import './component/css/style.css';
 import Login from './component/Login';
 import DashBoard from './component/DashBoard';
@@ -10,7 +11,7 @@ import Messages from './component/Messages';
 function App() {
     return (
         <>
-           <Messages/>
+           <DashBoard/>
         </>
     );
 }

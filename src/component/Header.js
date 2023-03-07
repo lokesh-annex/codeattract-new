@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
 import Logo from './images/logo-light.png';
-import Avtar from './images/avatar-7.jpg';
+
+import ToogleDesktop from './ToogleDesktop';
+import ToogleProfile from './ToogleProfile';
 
 function Header() {
-    const [toggle, setToggle] = useState(false)
-    function toggleButton() {
-        if (toggle) { }
-        setToggle(!toggle)
-
-    }
     return (
         <>
 
@@ -34,45 +30,8 @@ function Header() {
                                 </span>
                             </a>
                         </div>
-                        <div className="dropdown d-none d-md-block ms-2">
-                            <button type="button" className="btn header-item waves-effect" >
-                                <span className="mdi mdi-menu font-size-24"></span>
-                            </button>
-                            <div className="dropdown-menu dropdown-menu-end" >
-
-                                <a className="dropdown-item notify-item">
-                                    <span className="align-middle"> HOME </span>
-                                </a>
-
-
-                                <a className="dropdown-item notify-item">
-                                    <span className="align-middle"> SALES </span>
-                                </a>
-
-
-                                <a className="dropdown-item notify-item">
-                                    <span className="align-middle"> PLAYERS DB </span>
-                                </a>
-
-
-                                <a className="dropdown-item notify-item">
-                                    <span className="align-middle"> TOURN DB </span>
-                                </a>
-
-
-                                <a className="dropdown-item notify-item">
-                                    <span className="align-middle"> TOURN MGT </span>
-                                </a>
-
-                                <a className="dropdown-item notify-item">
-                                    <span className="align-middle"> UPLOADS </span>
-                                </a>
-
-                                <a className="dropdown-item notify-item">
-                                    <span className="align-middle"> MESSAGES DB </span>
-                                </a>
-                            </div>
-                        </div>
+                        <ToogleDesktop/>
+                    
                         <button type="button" className="btn btn-sm px-3 font-size-24 d-lg-none header-item waves-effect waves-light" >
                             <i className="mdi mdi-menu"></i>
                         </button>
@@ -158,16 +117,13 @@ function Header() {
                         </div>
 
                         <div className="dropdown d-inline-block">
-                            <button type="button" className="btn header-item waves-effect" id="page-header-user-dropdown" >
-                                <img className="rounded-circle header-profile-user" src={Avtar} alt="Header Avatar" />
-                                <span className="d-none d-xl-inline-block ms-1">Avinash</span>
-                                <i className="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
-                            </button>
+                         
+                            <ToogleProfile/>
                             <div className="dropdown-menu dropdown-menu-end" >
 
-                                <a className="dropdown-item" href="#"><i className="mdi mdi-account-circle-outline font-size-16 align-middle me-1"></i> Profile</a>
-                                <a className="dropdown-item d-block" href="#"><i className="mdi mdi-cog-outline font-size-16 align-middle me-1"></i> Settings</a>
-                                <a className="dropdown-item text-danger" href="#"><i className="mdi mdi-power font-size-16 align-middle me-1 text-danger"></i> Logout</a>
+                                <a className="dropdown-item" href="#"></a>
+                                <a className="dropdown-item d-block" href="#"></a>
+                                <a className="dropdown-item text-danger" href="#"></a>
                             </div>
                         </div>
                     </div>

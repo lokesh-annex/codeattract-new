@@ -169,7 +169,8 @@
     box-shadow: none !important;
     color: #919bae;
     border: 0;
-    border-radius: 0
+    border-radius: 0;
+    background: transparent !important;
 }
 
 .header-item:hover {
@@ -232,7 +233,7 @@
     content: "\ea3f"
 }
 
-body[data-topbar=dark] #page-topbar {
+#page-topbar {
     background-color: #141b2d
 }
 
@@ -244,7 +245,7 @@ body[data-topbar=dark] .navbar-header .waves-effect .waves-ripple {
     background: rgba(255, 255, 255, .4)
 }
 
-body[data-topbar=dark] .header-item {
+.header-item {
     color: #e9ecef
 }
 
@@ -256,7 +257,7 @@ body[data-topbar=dark] .header-profile-user {
     background-color: rgba(255, 255, 255, .25)
 }
 
-body[data-topbar=dark] .noti-icon i {
+.noti-icon i {
     color: #e9ecef
 }
 
@@ -4770,7 +4771,7 @@ body[data-layout-size="boxed"] #layout-wrapper {
     background-color: #000000;
 }
 
-body[data-topbar="dark"] #page-topbar {
+ #page-topbar {
     background-color: #0a1020;
 }
 

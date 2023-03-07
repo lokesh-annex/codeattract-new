@@ -291,7 +291,11 @@ body[data-sidebar=dark] .logo-light {
     .navbar-header .dropdown {
         position: static
     }
-
+    .navbar-header .dropdown .mobile-menu.dropdown-menu {
+       
+        padding: 0.8rem 0.2rem;
+      
+     }
     .navbar-header .dropdown .dropdown-menu {
         left: 10px !important;
         right: 10px !important
@@ -2118,7 +2122,6 @@ body[data-layout=horizontal][data-layout-size=boxed] .navbar-header {
 
 .simplebar-mask {
     direction: inherit;
-    position: absolute;
     overflow: hidden;
     padding: 0;
     margin: 0;
@@ -2126,7 +2129,7 @@ body[data-layout=horizontal][data-layout-size=boxed] .navbar-header {
     top: 0;
     bottom: 0;
     right: 0;
-    width: auto !important;
+    width: 100% !important;
     height: auto !important;
     z-index: 0
 }
@@ -2136,11 +2139,6 @@ body[data-layout=horizontal][data-layout-size=boxed] .navbar-header {
     -webkit-box-sizing: inherit !important;
     box-sizing: inherit !important;
     resize: none !important;
-    position: absolute;
-    top: 0;
-    left: 0 !important;
-    bottom: 0;
-    right: 0 !important;
     padding: 0;
     margin: 0;
     -webkit-overflow-scrolling: touch

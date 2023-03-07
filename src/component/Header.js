@@ -3,6 +3,8 @@ import Logo from './images/logo-light.png';
 
 import ToogleDesktop from './ToogleDesktop';
 import ToogleProfile from './ToogleProfile';
+import ToogleNotification from './ToogleNotification';
+import ToogleMobile from './ToogleMobile';
 
 function Header() {
     return (
@@ -31,10 +33,7 @@ function Header() {
                             </a>
                         </div>
                         <ToogleDesktop/>
-                    
-                        <button type="button" className="btn btn-sm px-3 font-size-24 d-lg-none header-item waves-effect waves-light" >
-                            <i className="mdi mdi-menu"></i>
-                        </button>
+                        <ToogleMobile/>
                     </div>
 
                     <div className="search-wrap" id="search-wrap">
@@ -59,61 +58,9 @@ function Header() {
                         </div>
 
                         <div className="dropdown d-inline-block">
-                            <button type="button" className="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown">
-                                <i className="mdi mdi-bell-outline bx-tada"></i>
-                                <span className="badge bg-danger rounded-pill">3</span>
-                            </button>
-                            <div className="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0">
-                                <div className="p-3">
-                                    <div className="row align-items-center">
-                                        <div className="col">
-                                            <h6 className="m-0">Notifications</h6>
-                                        </div>
-                                        <div className="col-auto">
-                                            <a href="#!" className="small"> View All</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div data-simplebar="init">
-                                    <div className="simplebar-wrapper">
-                                        <div className="simplebar-height-auto-observer-wrapper">
-                                            <div className="simplebar-height-auto-observer"></div></div>
-                                        <div className="simplebar-mask">
-                                            <div className="simplebar-offset">
-                                                <div className="simplebar-content-wrapper">
-                                                    <div className="simplebar-content">
-                                                        <a href="" className="text-reset notification-item">
-                                                            <div className="media">
-                                                                <div className="avatar-xs me-3">
-                                                                    <span className="avatar-title bg-primary rounded-circle font-size-16">
-                                                                        <i className="mdi mdi-user text-white"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div className="media-body">
-                                                                    <h6 className="mt-0 mb-1">New User Signup</h6>
-                                                                    <div className="font-size-13 text-muted">
-                                                                        <p className="mb-1"></p>
-                                                                        <p className="mb-0"><i className="mdi mdi-clock-outline"></i> 3 min ago</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="simplebar-placeholder"></div>
-                                    </div>
-                                    <div className="simplebar-track simplebar-horizontal">
-                                        <div className="simplebar-scrollbar" ></div></div>
-                                    <div className="simplebar-track simplebar-vertical" >
-                                        <div className="simplebar-scrollbar"></div></div>
-                                </div>
-                                <div className="p-2 border-top">
-                                    <a className="btn btn-sm btn-link font-size-14 w-100 text-center" >
-                                        <i className="mdi mdi-arrow-right-circle me-1"></i> View More.. </a>
-                                </div>
-                            </div>
+                           
+                            <ToogleNotification/>
+                          
                         </div>
 
                         <div className="dropdown d-inline-block">

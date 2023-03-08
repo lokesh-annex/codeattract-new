@@ -47,7 +47,7 @@ function Login() {
                                                 </div>
 
                                                 <div>
-                                                    <a className="btn btn-primary w-100 waves-effect waves-light" href="/havells">Log In</a>
+                                                    <a className="btn btn-primary w-100 waves-effect waves-light" href="/dashBoard">Log In</a>
                                                 </div>
 
                                                 <div className="mt-4 text-center">

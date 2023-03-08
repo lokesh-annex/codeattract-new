@@ -12,13 +12,13 @@ function DropdownList() {
 
 
       <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">HOME</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">SALES</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">PLAYERS DB</Dropdown.Item>
-        <Dropdown.Item href="#/action-4"> TOURN DB</Dropdown.Item>
-        <Dropdown.Item href="#/action-5">TOURN MGT</Dropdown.Item>
-        <Dropdown.Item href="#/action-6">UPLOADS</Dropdown.Item>
-        <Dropdown.Item href="#/action-7">MESSAGES DB</Dropdown.Item>
+        <Dropdown.Item href="/dashBoard">HOME</Dropdown.Item>
+        <Dropdown.Item href="">SALES</Dropdown.Item>
+        <Dropdown.Item href="">PLAYERS DB</Dropdown.Item>
+        <Dropdown.Item href="/tournaments"> TOURN DB</Dropdown.Item>
+        <Dropdown.Item href="">TOURN MGT</Dropdown.Item>
+        <Dropdown.Item href="/uploads">UPLOADS</Dropdown.Item>
+        <Dropdown.Item href="/messages">MESSAGES DB</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );

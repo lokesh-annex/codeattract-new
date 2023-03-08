@@ -16,7 +16,7 @@ function DropdownList() {
       <Dropdown.Menu>
         <Dropdown.Item href="#/action-1"><i className="mdi mdi-account-circle-outline font-size-16 align-middle me-1"></i> Profile</Dropdown.Item>
         <Dropdown.Item href="#/action-2"><i className="mdi mdi-cog-outline font-size-16 align-middle me-1"></i> Settings</Dropdown.Item>
-        <Dropdown.Item href="#/action-3"><i className="mdi mdi-power font-size-16 align-middle me-1 text-danger"></i> Logout</Dropdown.Item>
+        <Dropdown.Item href="/"><i className="mdi mdi-power font-size-16 align-middle me-1 text-danger"></i> Logout</Dropdown.Item>
         
       </Dropdown.Menu>
     </Dropdown>

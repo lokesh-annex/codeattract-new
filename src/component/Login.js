@@ -1,8 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from './images/logo-light.png';
 import House from './images/house.svg';
+import { useMutation } from 'react-query';
+import axios from 'axios';
+import { useForm } from 'react-hook-form';
+import useSaveUser from './api/post';
+import { setToken } from '../helpers';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
+  const navigate = useNavigate();
+const saveUserMutation = useSaveUser({
+  onSuccess: (response) => {
+    if(response){
+      // router.push("/");
+      console.log("onSuccess", response)
+      setToken(response.data.token)
+
+      navigate("/dashBoard");
+    }
+  },
+  onError: (response) =>{
+    console.log("onError", response)
+    if(response?.message){
+      alert(response?.message)
+    }
+
+  },
+  resource:'login',
+  method:'post'
+});
+
+const { register, handleSubmit, formState: { errors } } = useForm();
+  const onSubmit = (e) => {
+    saveUserMutation.mutate(e)
+}
+  // console.log(process.env.REACT_APP_API_URL)
     return (
         <>
             <div className="home-center">
@@ -28,15 +61,17 @@ function Login() {
                                                 <p className="text-muted">Sign in to continue.</p>
                                             </div>
 
-                                            <form className="form-horizontal mt-4 pt-2" action="/">
+                                            <form className="form-horizontal mt-4 pt-2" onSubmit={handleSubmit(onSubmit)}>
                                                 <div className="mb-3">
                                                     <label for="username">Username</label>
-                                                    <input type="text" className="form-control" id="username" value="test@gmail.com" placeholder="Enter username" />
+                                                    <input type="text" className="form-control" id="username"  placeholder="Enter username"  {...register("username", {required: true, minLength: 3})}/>
+                                                    {errors.username && <p>Please check the username</p>}
                                                 </div>
 
                                                 <div className="mb-3">
                                                     <label for="userpassword">Password</label>
-                                                    <input type="password" className="form-control" id="userpassword" value="t123456" placeholder="Enter password" />
+                                                    <input type="password" className="form-control" id="userpassword"  placeholder="Enter password" {...register("password", {required: true, minLength: 3})}/>
+                                                    {errors.password && <p>Please check the password</p>}
                                                 </div>
 
                                                 <div className="mb-3">
@@ -47,7 +82,7 @@ function Login() {
                                                 </div>
 
                                                 <div>
-                                                    <a className="btn btn-primary w-100 waves-effect waves-light" href="/dashBoard">Log In</a>
+                                                    <button className="btn btn-primary w-100 waves-effect waves-light" onClick={() => handleSubmit(onSubmit)}>Log In</button>
                                                 </div>
 
                                                 <div className="mt-4 text-center">
